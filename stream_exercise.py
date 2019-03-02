@@ -1,5 +1,4 @@
 
-
 class StreamProcessor(object):
     """
     Write a stream processor class that does the following:
@@ -56,12 +55,12 @@ class StreamProcessor(object):
                    # together.
         total = 0  # The running total of sums.
 
-        # TODO: WRITE CODE HERE:
+        remaining_b = len(self._stream.getvalue())
 
-        # Just some example syntax, you can read two digits from the head of the
-        # stream using the following code:
-        #
-        # digits = self._stream.read(2)
-
+        while total < 200 and count < 10 and remaining_b > 1:
+            digits = self._stream.read(2)
+            remaining_b = remaining_b - 2
+            total = total + int(digits)
+            count = count + 1
 
         return count

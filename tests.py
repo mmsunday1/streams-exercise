@@ -6,7 +6,8 @@ unittest library. This can be used to demonstrate in-class that unit testing
 is a simple concept which benefits from the use of a library, but does not
 require it.
 
-Run with `python tests.py`. The return code will be the number of test failures.
+Run with `python tests.py`. The return code will be the number of test
+failures.
 """
 
 import io
